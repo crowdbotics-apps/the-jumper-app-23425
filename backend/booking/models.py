@@ -53,16 +53,26 @@ class Rating(models.Model):
 
 class BookingTransaction(models.Model):
     "Generated Model"
-    distance = models.FloatField()
-    price = models.FloatField()
+    distance = models.FloatField(
+        blank=True,
+    )
+    price = models.FloatField(
+        blank=True,
+    )
     status = models.CharField(
         max_length=10,
+        blank=True,
     )
     timestamp_created = models.DateTimeField(
         auto_now_add=True,
+        blank=True,
     )
-    timestamp_depart = models.DateTimeField()
-    timestamp_arrive = models.DateTimeField()
+    timestamp_depart = models.DateTimeField(
+        blank=True,
+    )
+    timestamp_arrive = models.DateTimeField(
+        blank=True,
+    )
     user = models.ForeignKey(
         "taxi_profile.UserProfile",
         null=True,
@@ -77,14 +87,7 @@ class BookingTransaction(models.Model):
         on_delete=models.SET_NULL,
         related_name="bookingtransaction_driver",
     )
-    pickup = models.ForeignKey(
-        "location.MapLocation",
-        null=True,
-        blank=True,
-        on_delete=models.SET_NULL,
-        related_name="bookingtransaction_pickup",
-    )
-    dropoff = models.ForeignKey(
+    location = models.ForeignKey(
         "location.MapLocation",
         null=True,
         blank=True,
