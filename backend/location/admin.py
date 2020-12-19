@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import VehicleLocation, ProfileLocation, MapLocation
+from .models import MapLocation, ProfileLocation, VehicleLocation
 
 admin.site.register(VehicleLocation)
 admin.site.register(MapLocation)

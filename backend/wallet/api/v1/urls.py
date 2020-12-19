@@ -1,6 +1,6 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .viewsets import UserWalletViewSet, PaymentMethodViewSet, DriverWalletViewSet
+from .viewsets import DriverWalletViewSet, PaymentMethodViewSet, UserWalletViewSet
 
 router = DefaultRouter()
 router.register("driverwallet", DriverWalletViewSet)

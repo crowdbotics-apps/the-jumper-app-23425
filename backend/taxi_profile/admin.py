@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Document, UserProfile, DriverProfile, InviteCode, Notification
+from .models import Document, DriverProfile, InviteCode, Notification, UserProfile
 
 admin.site.register(DriverProfile)
 admin.site.register(Document)

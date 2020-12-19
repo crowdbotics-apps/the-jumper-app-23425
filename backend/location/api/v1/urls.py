@@ -1,6 +1,6 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .viewsets import VehicleLocationViewSet, ProfileLocationViewSet, MapLocationViewSet
+from .viewsets import MapLocationViewSet, ProfileLocationViewSet, VehicleLocationViewSet
 
 router = DefaultRouter()
 router.register("vehiclelocation", VehicleLocationViewSet)

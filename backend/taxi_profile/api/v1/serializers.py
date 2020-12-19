@@ -1,10 +1,10 @@
 from rest_framework import serializers
 from taxi_profile.models import (
     Document,
-    UserProfile,
     DriverProfile,
     InviteCode,
     Notification,
+    UserProfile,
 )
 
 

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from location.models import VehicleLocation, ProfileLocation, MapLocation
+from location.models import MapLocation, ProfileLocation, VehicleLocation
 
 
 class VehicleLocationSerializer(serializers.ModelSerializer):

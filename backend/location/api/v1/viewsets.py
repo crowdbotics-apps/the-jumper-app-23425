@@ -1,9 +1,9 @@
 from rest_framework import authentication
-from location.models import VehicleLocation, ProfileLocation, MapLocation
+from location.models import MapLocation, ProfileLocation, VehicleLocation
 from .serializers import (
-    VehicleLocationSerializer,
-    ProfileLocationSerializer,
     MapLocationSerializer,
+    ProfileLocationSerializer,
+    VehicleLocationSerializer,
 )
 from rest_framework import viewsets
 

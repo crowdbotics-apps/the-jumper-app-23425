@@ -1,9 +1,9 @@
 from rest_framework import authentication
-from wallet.models import UserWallet, PaymentMethod, DriverWallet
+from wallet.models import DriverWallet, PaymentMethod, UserWallet
 from .serializers import (
-    UserWalletSerializer,
-    PaymentMethodSerializer,
     DriverWalletSerializer,
+    PaymentMethodSerializer,
+    UserWalletSerializer,
 )
 from rest_framework import viewsets
 

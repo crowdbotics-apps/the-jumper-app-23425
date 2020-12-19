@@ -1,17 +1,17 @@
 from rest_framework import authentication
 from taxi_profile.models import (
     Document,
-    UserProfile,
     DriverProfile,
     InviteCode,
     Notification,
+    UserProfile,
 )
 from .serializers import (
     DocumentSerializer,
-    UserProfileSerializer,
     DriverProfileSerializer,
     InviteCodeSerializer,
     NotificationSerializer,
+    UserProfileSerializer,
 )
 from rest_framework import viewsets
 

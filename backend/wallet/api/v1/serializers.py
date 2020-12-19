@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from wallet.models import UserWallet, PaymentMethod, DriverWallet
+from wallet.models import DriverWallet, PaymentMethod, UserWallet
 
 
 class DriverWalletSerializer(serializers.ModelSerializer):
