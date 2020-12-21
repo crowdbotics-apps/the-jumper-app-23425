@@ -1,0 +1,40 @@
+import React, { Component } from 'react'
+import { AppRegistry, Text, View, StyleSheet } from 'react-native'
+class App extends Component {
+  state = {
+      booking_id: '',
+  };
+  handleBooking = booking_id => {
+     this.setState({booking_id: booking_id})
+  };
+  
+  render() {
+      const { booking_id } = this.state;
+      return (
+          <View style={styles.container}>
+             <Text>Booking Id: {booking_id}</Text>
+              <TextInput 
+                style={styles.textInput}
+
+value={booking_id} onChangeText={text => this.onChangeText(text)}/>
+             <Text>Booking Date: {new Date(booking_id)}</Text>
+             <Text>Booking Time: {new Date(booking_id) + " " + new Date(booking_id).getHours()}</Text>
+          </View>
+      );
+  }
+}
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "stretch",
+    padding: 20
+  },
+textInput: {
+    width: "95%",
+    borderColor: "blue",
+    borderWidth: 1,
+    marginBottom: 20
+  },
+})
+AppRegistry.registerComponent('App', () => App)
